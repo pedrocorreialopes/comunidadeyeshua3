@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Músicas Católicas — Comunidade Yeshuá</title>
+<meta name="description" content="Músicas católicas, louvor e adoração da Comunidade Yeshuá.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .playlist{
+    display:flex;
+    flex-direction:column;
+    gap: 14px;
+  }
+  .playlist-item{
+    display:flex;
+    align-items:center;
+    gap: 18px;
+    background:#fff;
+    border-radius: 14px;
+    padding: 16px 22px;
+    box-shadow: var(--shadow-soft);
+    transition: transform .3s ease;
+  }
+  .playlist-item:hover{ transform: translateX(6px); }
+  .playlist-item .track-num{
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    color: var(--color-gold);
+    width: 36px;
+  }
+  .playlist-item .track-icon{
+    width: 46px; height:46px;
+    border-radius:50%;
+    background: var(--color-wine);
+    color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-size:1rem;
+    flex-shrink:0;
+  }
+  .playlist-item .track-info h4{ margin:0 0 4px; font-size:1.05rem; color:var(--color-wine-dark); font-family:var(--font-display);}
+  .playlist-item .track-info p{ margin:0; font-size:.82rem; color:var(--color-ink-soft); font-family:var(--font-ui); }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand"><i class="fa-solid fa-cross brand-cross"></i> Comunidade Yeshuá<small>Entre, a porta está aberta</small></a>
+    <div class="header-actions">
+      <a href="index.html" class="home-link"><i class="fa-solid fa-house"></i> Início</a>
+      <button class="menu-toggle" data-menu-open><i class="fa-solid fa-bars"></i> Menu</button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-overlay" id="nav-overlay">
+  <button class="nav-close" id="nav-close" aria-label="Fechar menu"><i class="fa-solid fa-xmark"></i></button>
+  <div class="nav-overlay-inner">
+    <p class="nav-title">Comunidade Yeshuá</p>
+    <h2 class="nav-title-main">Para onde o Senhor te chama hoje?</h2>
+    <nav class="nav-grid" aria-label="Menu principal">
+      <a class="nav-card" href="oracao.html"><i class="fa-solid fa-hands-praying"></i><span>Oração</span><small>Peça, agradeça, intercede</small></a>
+      <a class="nav-card" href="leitura-da-palavra.html"><i class="fa-solid fa-book-bible"></i><span>Leitura da Palavra</span><small>A Bíblia e a Liturgia diária</small></a>
+      <a class="nav-card" href="meditacao.html"><i class="fa-solid fa-dove"></i><span>Meditação</span><small>Silêncio e presença de Deus</small></a>
+      <a class="nav-card" href="formacao.html"><i class="fa-solid fa-graduation-cap"></i><span>Formação</span><small>Cursos e estudos da fé</small></a>
+      <a class="nav-card" href="catequese.html"><i class="fa-solid fa-cross"></i><span>Catequese</span><small>Crianças, jovens e adultos</small></a>
+      <a class="nav-card" href="musicas.html"><i class="fa-solid fa-music"></i><span>Músicas Católicas</span><small>Louvor e adoração</small></a>
+      <a class="nav-card" href="noticias.html"><i class="fa-solid fa-newspaper"></i><span>Notícias da Igreja</span><small>Igreja Católica e o Papa</small></a>
+      <a class="nav-card" href="galeria.html"><i class="fa-solid fa-images"></i><span>Galeria de Imagens</span><small>Momentos da Comunidade</small></a>
+      <a class="nav-card" href="testemunhos.html"><i class="fa-solid fa-heart"></i><span>Testemunhos</span><small>Histórias de graça e fé</small></a>
+      <a class="nav-card" href="benfeitor.html"><i class="fa-solid fa-hand-holding-heart"></i><span>Espaço do Benfeitor</span><small>Ajude esta missão</small></a>
+      <a class="nav-card" href="sobre.html"><i class="fa-solid fa-church"></i><span>Sobre Nós</span><small>Quem somos e nossa missão</small></a>
+      <a class="nav-card" href="contato.html"><i class="fa-solid fa-envelope-open-text"></i><span>Contato</span><small>Fale com a Comunidade</small></a>
+    </nav>
+  </div>
+</div>
+
+<section class="page-hero" style="background-image:url('images/guitar-worship.jpg');">
+  <div class="container page-hero-content">
+    <span class="eyebrow">Louvor e Adoração</span>
+    <h1>Músicas Católicas</h1>
+    <p>"Cantai ao Senhor um canto novo" (Sl 96,1). A música é oração, é louvor que eleva a alma e prepara o coração para o encontro com Deus.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p class="eyebrow text-center" style="display:block;">Sugestões de Louvor</p>
+    <h2 class="section-title text-center">Playlist da Comunidade</h2>
+    <div class="divider"></div>
+    <p class="section-lead">Separamos cânticos e louvores para acompanhar seus momentos de oração, adoração e meditação. Use estes títulos para buscar em sua plataforma de música preferida.</p>
+
+    <div class="playlist reveal">
+      <div class="playlist-item">
+        <span class="track-num">01</span>
+        <span class="track-icon"><i class="fa-solid fa-music"></i></span>
+        <div class="track-info"><h4>Ressuscitou</h4><p>Louvor de adoração pascal</p></div>
+      </div>
+      <div class="playlist-item">
+        <span class="track-num">02</span>
+        <span class="track-icon"><i class="fa-solid fa-music"></i></span>
+        <div class="track-info"><h4>Reina Em Mim</h4><p>Cântico de entrega e adoração</p></div>
+      </div>
+      <div class="playlist-item">
+        <span class="track-num">03</span>
+        <span class="track-icon"><i class="fa-solid fa-music"></i></span>
+        <div class="track-info"><h4>Ave Maria (versão popular)</h4><p>Louvor mariano tradicional</p></div>
+      </div>
+      <div class="playlist-item">
+        <span class="track-num">04</span>
+        <span class="track-icon"><i class="fa-solid fa-music"></i></span>
+        <div class="track-info"><h4>Vim Te Adorar</h4><p>Adoração ao Santíssimo Sacramento</p></div>
+      </div>
+      <div class="playlist-item">
+        <span class="track-num">05</span>
+        <span class="track-icon"><i class="fa-solid fa-music"></i></span>
+        <div class="track-info"><h4>Espírito Santo, Vem</h4><p>Invocação ao Espírito Santo</p></div>
+      </div>
+      <div class="playlist-item">
+        <span class="track-num">06</span>
+        <span class="track-icon"><i class="fa-solid fa-music"></i></span>
+        <div class="track-info"><h4>Deus Cuida de Mim</h4><p>Cântico de confiança e paz</p></div>
+      </div>
+      <div class="playlist-item">
+        <span class="track-num">07</span>
+        <span class="track-icon"><i class="fa-solid fa-music"></i></span>
+        <div class="track-info"><h4>Digno É o Senhor</h4><p>Louvor de exaltação</p></div>
+      </div>
+      <div class="playlist-item">
+        <span class="track-num">08</span>
+        <span class="track-icon"><i class="fa-solid fa-music"></i></span>
+        <div class="track-info"><h4>Sede de Ti</h4><p>Cântico de intimidade com Deus</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt-bg">
+  <div class="container">
+    <div class="quote-block reveal">
+      <span class="quote-mark">"</span>
+      <p>Quem canta reza duas vezes.</p>
+      <cite>Santo Agostinho</cite>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container text-center">
+    <h2>Cante conosco nos encontros de louvor</h2>
+    <div class="divider"></div>
+    <p class="section-lead">Participe dos nossos momentos de música e adoração presenciais. Confira a agenda com nossa equipe de música.</p>
+    <a href="contato.html" class="btn btn-primary"><i class="fa-solid fa-music"></i> Saber mais</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Comunidade Yeshuá</h4>
+        <p>Evangelizar é a nossa missão. Levamos a mensagem viva de Jesus Cristo a todos os corações, com fé, oração e alegria.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Navegue</h4>
+        <a href="oracao.html">Oração</a>
+        <a href="formacao.html">Formação</a>
+        <a href="catequese.html">Catequese</a>
+        <a href="noticias.html">Notícias da Igreja</a>
+        <a href="galeria.html">Galeria de Imagens</a>
+      </div>
+      <div>
+        <h4>Mais</h4>
+        <a href="testemunhos.html">Testemunhos</a>
+        <a href="musicas.html">Músicas Católicas</a>
+        <a href="meditacao.html">Meditação</a>
+        <a href="leitura-da-palavra.html">Leitura da Palavra</a>
+        <a href="benfeitor.html">Espaço do Benfeitor</a>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Comunidade Yeshuá</p>
+        <p><i class="fa-solid fa-envelope"></i> contato@comunidadeyeshua.org</p>
+        <a href="contato.html">Fale com a Comunidade →</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="current-year"></span> Comunidade Yeshuá — Todos os direitos reservados.</p>
+      <p>Desenvolvido por <strong>Pedro Correia Lopes Filho</strong></p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galeria de Imagens — Comunidade Yeshuá</title>
+<meta name="description" content="Galeria de imagens da Comunidade Yeshuá: momentos de fé, celebrações e evangelização.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .gallery-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    gap: 18px;
+  }
+  .gallery-item{
+    position:relative;
+    border-radius: 14px;
+    overflow:hidden;
+    aspect-ratio: 4/3;
+    cursor:pointer;
+    box-shadow: var(--shadow-soft);
+  }
+  .gallery-item img{ width:100%; height:100%; object-fit:cover; transition: transform .5s ease; }
+  .gallery-item:hover img{ transform: scale(1.08); }
+  .gallery-item .gallery-caption{
+    position:absolute; left:0; right:0; bottom:0;
+    padding: 16px;
+    background: linear-gradient(180deg, transparent, rgba(43,24,16,.85));
+    color:#fff;
+    font-family: var(--font-ui);
+    font-size:.85rem;
+    letter-spacing:.5px;
+  }
+  .lightbox{
+    position:fixed; inset:0; z-index:1000;
+    background: rgba(16,4,5,.92);
+    display:none;
+    align-items:center; justify-content:center;
+    padding: 30px;
+  }
+  .lightbox.open{ display:flex; }
+  .lightbox img{ max-width:90vw; max-height:85vh; border-radius:10px; border:3px solid var(--color-gold); }
+  .lightbox-close{
+    position:absolute; top:26px; right:32px;
+    width:46px;height:46px;border-radius:50%;
+    border:1px solid var(--color-gold);
+    background:transparent;color:#f3d98b;font-size:1.3rem;cursor:pointer;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand"><i class="fa-solid fa-cross brand-cross"></i> Comunidade Yeshuá<small>Entre, a porta está aberta</small></a>
+    <div class="header-actions">
+      <a href="index.html" class="home-link"><i class="fa-solid fa-house"></i> Início</a>
+      <button class="menu-toggle" data-menu-open><i class="fa-solid fa-bars"></i> Menu</button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-overlay" id="nav-overlay">
+  <button class="nav-close" id="nav-close" aria-label="Fechar menu"><i class="fa-solid fa-xmark"></i></button>
+  <div class="nav-overlay-inner">
+    <p class="nav-title">Comunidade Yeshuá</p>
+    <h2 class="nav-title-main">Para onde o Senhor te chama hoje?</h2>
+    <nav class="nav-grid" aria-label="Menu principal">
+      <a class="nav-card" href="oracao.html"><i class="fa-solid fa-hands-praying"></i><span>Oração</span><small>Peça, agradeça, intercede</small></a>
+      <a class="nav-card" href="leitura-da-palavra.html"><i class="fa-solid fa-book-bible"></i><span>Leitura da Palavra</span><small>A Bíblia e a Liturgia diária</small></a>
+      <a class="nav-card" href="meditacao.html"><i class="fa-solid fa-dove"></i><span>Meditação</span><small>Silêncio e presença de Deus</small></a>
+      <a class="nav-card" href="formacao.html"><i class="fa-solid fa-graduation-cap"></i><span>Formação</span><small>Cursos e estudos da fé</small></a>
+      <a class="nav-card" href="catequese.html"><i class="fa-solid fa-cross"></i><span>Catequese</span><small>Crianças, jovens e adultos</small></a>
+      <a class="nav-card" href="musicas.html"><i class="fa-solid fa-music"></i><span>Músicas Católicas</span><small>Louvor e adoração</small></a>
+      <a class="nav-card" href="noticias.html"><i class="fa-solid fa-newspaper"></i><span>Notícias da Igreja</span><small>Igreja Católica e o Papa</small></a>
+      <a class="nav-card" href="galeria.html"><i class="fa-solid fa-images"></i><span>Galeria de Imagens</span><small>Momentos da Comunidade</small></a>
+      <a class="nav-card" href="testemunhos.html"><i class="fa-solid fa-heart"></i><span>Testemunhos</span><small>Histórias de graça e fé</small></a>
+      <a class="nav-card" href="benfeitor.html"><i class="fa-solid fa-hand-holding-heart"></i><span>Espaço do Benfeitor</span><small>Ajude esta missão</small></a>
+      <a class="nav-card" href="sobre.html"><i class="fa-solid fa-church"></i><span>Sobre Nós</span><small>Quem somos e nossa missão</small></a>
+      <a class="nav-card" href="contato.html"><i class="fa-solid fa-envelope-open-text"></i><span>Contato</span><small>Fale com a Comunidade</small></a>
+    </nav>
+  </div>
+</div>
+
+<section class="page-hero" style="background-image:url('images/chandelier-church.jpg');">
+  <div class="container page-hero-content">
+    <span class="eyebrow">Registros de Fé</span>
+    <h1>Galeria de Imagens</h1>
+    <p>Reviva momentos de oração, celebração e comunhão vividos pela Comunidade Yeshuá.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="gallery-grid" id="gallery">
+      <div class="gallery-item reveal"><img src="images/hero-sacred-heart.jpg" alt="Sagrado Coração de Jesus"><span class="gallery-caption">Sagrado Coração de Jesus</span></div>
+      <div class="gallery-item reveal"><img src="images/sacred-heart-alt.jpg" alt="Coração de Jesus, pintura clássica"><span class="gallery-caption">Devoção ao Coração de Jesus</span></div>
+      <div class="gallery-item reveal"><img src="images/altar-natchez.jpg" alt="Altar da Basílica"><span class="gallery-caption">Altar em celebração solene</span></div>
+      <div class="gallery-item reveal"><img src="images/chandelier-church.jpg" alt="Interior de igreja iluminado"><span class="gallery-caption">Luz e beleza do templo</span></div>
+      <div class="gallery-item reveal"><img src="images/altar-candles-spain.jpg" alt="Altar com velas"><span class="gallery-caption">Velas de oração no altar</span></div>
+      <div class="gallery-item reveal"><img src="images/rosary-hands.jpg" alt="Mãos com terço"><span class="gallery-caption">Rezando o Santo Terço</span></div>
+      <div class="gallery-item reveal"><img src="images/rosary-person.jpg" alt="Pessoa com terço em oração"><span class="gallery-caption">Momento de oração pessoal</span></div>
+      <div class="gallery-item reveal"><img src="images/bible-open.jpg" alt="Bíblia aberta"><span class="gallery-caption">A Palavra de Deus</span></div>
+      <div class="gallery-item reveal"><img src="images/bible-catholic.jpg" alt="Bíblia católica"><span class="gallery-caption">Sagrada Escritura</span></div>
+      <div class="gallery-item reveal"><img src="images/helping-hands.jpg" alt="Mãos ajudando"><span class="gallery-caption">Caridade em ação</span></div>
+      <div class="gallery-item reveal"><img src="images/guitar-worship.jpg" alt="Música de louvor"><span class="gallery-caption">Louvor e Adoração</span></div>
+      <div class="gallery-item reveal"><img src="images/stained-glass-eye.jpg" alt="Vitral da igreja"><span class="gallery-caption">Vitrais sagrados</span></div>
+      <div class="gallery-item reveal"><img src="images/altar-general.jpg" alt="Altar de igreja"><span class="gallery-caption">Beleza da liturgia</span></div>
+      <div class="gallery-item reveal"><img src="images/candle-flame.jpg" alt="Chama de vela"><span class="gallery-caption">Chama da fé</span></div>
+      <div class="gallery-item reveal"><img src="images/sunbeam-clouds.jpg" alt="Luz do céu"><span class="gallery-caption">A luz de Deus nos céus</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightbox-close"><i class="fa-solid fa-xmark"></i></button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Comunidade Yeshuá</h4>
+        <p>Evangelizar é a nossa missão. Levamos a mensagem viva de Jesus Cristo a todos os corações, com fé, oração e alegria.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Navegue</h4>
+        <a href="oracao.html">Oração</a>
+        <a href="formacao.html">Formação</a>
+        <a href="catequese.html">Catequese</a>
+        <a href="noticias.html">Notícias da Igreja</a>
+        <a href="galeria.html">Galeria de Imagens</a>
+      </div>
+      <div>
+        <h4>Mais</h4>
+        <a href="testemunhos.html">Testemunhos</a>
+        <a href="musicas.html">Músicas Católicas</a>
+        <a href="meditacao.html">Meditação</a>
+        <a href="leitura-da-palavra.html">Leitura da Palavra</a>
+        <a href="benfeitor.html">Espaço do Benfeitor</a>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Comunidade Yeshuá</p>
+        <p><i class="fa-solid fa-envelope"></i> contato@comunidadeyeshua.org</p>
+        <a href="contato.html">Fale com a Comunidade →</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="current-year"></span> Comunidade Yeshuá — Todos os direitos reservados.</p>
+      <p>Desenvolvido por <strong>Pedro Correia Lopes Filho</strong></p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxClose = document.getElementById('lightbox-close');
+
+  document.querySelectorAll('.gallery-item img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('open');
+    });
+  });
+  lightboxClose.addEventListener('click', () => lightbox.classList.remove('open'));
+  lightbox.addEventListener('click', (e) => { if(e.target === lightbox) lightbox.classList.remove('open'); });
+</script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meditação — Comunidade Yeshuá</title>
+<meta name="description" content="Momentos de meditação e silêncio contemplativo diante do Coração de Jesus.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .breathing-circle{
+    width: 180px; height:180px;
+    margin: 30px auto;
+    border-radius:50%;
+    background: radial-gradient(circle, rgba(212,175,55,.5), rgba(107,20,32,.1));
+    border: 1px solid var(--color-gold);
+    display:flex;align-items:center;justify-content:center;
+    font-family: var(--font-ui);
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-size:.75rem;
+    color: var(--color-wine-dark);
+    animation: breathe 6s ease-in-out infinite;
+  }
+  @keyframes breathe{
+    0%,100%{ transform: scale(.85); }
+    50%{ transform: scale(1.15); }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand"><i class="fa-solid fa-cross brand-cross"></i> Comunidade Yeshuá<small>Entre, a porta está aberta</small></a>
+    <div class="header-actions">
+      <a href="index.html" class="home-link"><i class="fa-solid fa-house"></i> Início</a>
+      <button class="menu-toggle" data-menu-open><i class="fa-solid fa-bars"></i> Menu</button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-overlay" id="nav-overlay">
+  <button class="nav-close" id="nav-close" aria-label="Fechar menu"><i class="fa-solid fa-xmark"></i></button>
+  <div class="nav-overlay-inner">
+    <p class="nav-title">Comunidade Yeshuá</p>
+    <h2 class="nav-title-main">Para onde o Senhor te chama hoje?</h2>
+    <nav class="nav-grid" aria-label="Menu principal">
+      <a class="nav-card" href="oracao.html"><i class="fa-solid fa-hands-praying"></i><span>Oração</span><small>Peça, agradeça, intercede</small></a>
+      <a class="nav-card" href="leitura-da-palavra.html"><i class="fa-solid fa-book-bible"></i><span>Leitura da Palavra</span><small>A Bíblia e a Liturgia diária</small></a>
+      <a class="nav-card" href="meditacao.html"><i class="fa-solid fa-dove"></i><span>Meditação</span><small>Silêncio e presença de Deus</small></a>
+      <a class="nav-card" href="formacao.html"><i class="fa-solid fa-graduation-cap"></i><span>Formação</span><small>Cursos e estudos da fé</small></a>
+      <a class="nav-card" href="catequese.html"><i class="fa-solid fa-cross"></i><span>Catequese</span><small>Crianças, jovens e adultos</small></a>
+      <a class="nav-card" href="musicas.html"><i class="fa-solid fa-music"></i><span>Músicas Católicas</span><small>Louvor e adoração</small></a>
+      <a class="nav-card" href="noticias.html"><i class="fa-solid fa-newspaper"></i><span>Notícias da Igreja</span><small>Igreja Católica e o Papa</small></a>
+      <a class="nav-card" href="galeria.html"><i class="fa-solid fa-images"></i><span>Galeria de Imagens</span><small>Momentos da Comunidade</small></a>
+      <a class="nav-card" href="testemunhos.html"><i class="fa-solid fa-heart"></i><span>Testemunhos</span><small>Histórias de graça e fé</small></a>
+      <a class="nav-card" href="benfeitor.html"><i class="fa-solid fa-hand-holding-heart"></i><span>Espaço do Benfeitor</span><small>Ajude esta missão</small></a>
+      <a class="nav-card" href="sobre.html"><i class="fa-solid fa-church"></i><span>Sobre Nós</span><small>Quem somos e nossa missão</small></a>
+      <a class="nav-card" href="contato.html"><i class="fa-solid fa-envelope-open-text"></i><span>Contato</span><small>Fale com a Comunidade</small></a>
+    </nav>
+  </div>
+</div>
+
+<section class="page-hero" style="background-image:url('images/candle-flame.jpg');">
+  <div class="container page-hero-content">
+    <span class="eyebrow">Silêncio e Presença</span>
+    <h1>Meditação</h1>
+    <p>"Sossegai e sabei que eu sou Deus" (Sl 46,10). Reserve um momento para o silêncio interior e a escuta da voz de Deus em seu coração.</p>
+  </div>
+</section>
+
+<section class="text-center">
+  <div class="container" style="max-width:640px;">
+    <p class="eyebrow" style="display:block;">Exercício de Silêncio</p>
+    <h2 class="section-title">Respire com calma e ore</h2>
+    <div class="divider"></div>
+    <p class="section-lead">Observe o círculo respirar. Inspire quando ele cresce, expire quando ele diminui. Repita interiormente: "Jesus, eu confio em Vós."</p>
+    <div class="breathing-circle">Respire</div>
+  </div>
+</section>
+
+<section class="alt-bg">
+  <div class="container">
+    <p class="eyebrow text-center" style="display:block;">Caminhos de Meditação</p>
+    <h2 class="section-title text-center">Formas de Meditar com a Igreja</h2>
+    <div class="divider"></div>
+
+    <div class="card-grid">
+      <div class="info-card reveal">
+        <i class="fa-solid fa-book-open"></i>
+        <h3>Lectio Divina</h3>
+        <p>Leitura orante da Palavra de Deus em quatro passos: leitura, meditação, oração e contemplação.</p>
+      </div>
+      <div class="info-card reveal">
+        <i class="fa-solid fa-cross"></i>
+        <h3>Via-Sacra</h3>
+        <p>Meditação dos passos de Jesus rumo ao Calvário, contemplando Seu amor e sacrifício por nós.</p>
+      </div>
+      <div class="info-card reveal">
+        <i class="fa-solid fa-fire"></i>
+        <h3>Adoração Silenciosa</h3>
+        <p>Momento de estar diante do Santíssimo Sacramento em silêncio, deixando o coração repousar em Deus.</p>
+      </div>
+      <div class="info-card reveal">
+        <i class="fa-solid fa-heart"></i>
+        <h3>Meditação do Coração de Jesus</h3>
+        <p>Contemplação do amor infinito revelado no Sagrado Coração, fonte de misericórdia e consolo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="quote-block reveal">
+      <span class="quote-mark">"</span>
+      <p>No silêncio do coração, Deus fala. Se enches teu coração de outras coisas, não podes ouvir a voz de Deus.</p>
+      <cite>Santa Teresa de Calcutá</cite>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Comunidade Yeshuá</h4>
+        <p>Evangelizar é a nossa missão. Levamos a mensagem viva de Jesus Cristo a todos os corações, com fé, oração e alegria.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Navegue</h4>
+        <a href="oracao.html">Oração</a>
+        <a href="formacao.html">Formação</a>
+        <a href="catequese.html">Catequese</a>
+        <a href="noticias.html">Notícias da Igreja</a>
+        <a href="galeria.html">Galeria de Imagens</a>
+      </div>
+      <div>
+        <h4>Mais</h4>
+        <a href="testemunhos.html">Testemunhos</a>
+        <a href="musicas.html">Músicas Católicas</a>
+        <a href="meditacao.html">Meditação</a>
+        <a href="leitura-da-palavra.html">Leitura da Palavra</a>
+        <a href="benfeitor.html">Espaço do Benfeitor</a>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Comunidade Yeshuá</p>
+        <p><i class="fa-solid fa-envelope"></i> contato@comunidadeyeshua.org</p>
+        <a href="contato.html">Fale com a Comunidade →</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="current-year"></span> Comunidade Yeshuá — Todos os direitos reservados.</p>
+      <p>Desenvolvido por <strong>Pedro Correia Lopes Filho</strong></p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
